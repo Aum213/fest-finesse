@@ -16,11 +16,25 @@ export type Database = {
     Tables: {
       events: {
         Row: {
+          audience_participation: boolean | null
+          computing_requirement: string[] | null
           created_at: string
+          duration_hours: number | null
+          evaluation_setup: boolean | null
+          event_category: string | null
           event_date: string
+          facilities_required: string[] | null
           id: string
+          is_group_event: boolean | null
+          number_of_teams: number | null
+          priority: string | null
+          sound_requirement: boolean | null
+          space_type: string | null
+          stage_requirement: boolean | null
+          stalls_needed: number | null
           status: string
           student_count: number | null
+          time_slot: string | null
           title: string
           topic: string | null
           type: string
@@ -29,11 +43,25 @@ export type Database = {
           venue_id: string
         }
         Insert: {
+          audience_participation?: boolean | null
+          computing_requirement?: string[] | null
           created_at?: string
+          duration_hours?: number | null
+          evaluation_setup?: boolean | null
+          event_category?: string | null
           event_date: string
+          facilities_required?: string[] | null
           id?: string
+          is_group_event?: boolean | null
+          number_of_teams?: number | null
+          priority?: string | null
+          sound_requirement?: boolean | null
+          space_type?: string | null
+          stage_requirement?: boolean | null
+          stalls_needed?: number | null
           status?: string
           student_count?: number | null
+          time_slot?: string | null
           title: string
           topic?: string | null
           type: string
@@ -42,11 +70,25 @@ export type Database = {
           venue_id: string
         }
         Update: {
+          audience_participation?: boolean | null
+          computing_requirement?: string[] | null
           created_at?: string
+          duration_hours?: number | null
+          evaluation_setup?: boolean | null
+          event_category?: string | null
           event_date?: string
+          facilities_required?: string[] | null
           id?: string
+          is_group_event?: boolean | null
+          number_of_teams?: number | null
+          priority?: string | null
+          sound_requirement?: boolean | null
+          space_type?: string | null
+          stage_requirement?: boolean | null
+          stalls_needed?: number | null
           status?: string
           student_count?: number | null
+          time_slot?: string | null
           title?: string
           topic?: string | null
           type?: string
@@ -93,22 +135,31 @@ export type Database = {
       }
       venues: {
         Row: {
+          area_sqft: number
+          booked_slots: string[] | null
           capacity: number
           created_at: string
+          facilities: string[] | null
           id: string
           name: string
           type: string
         }
         Insert: {
+          area_sqft?: number
+          booked_slots?: string[] | null
           capacity: number
           created_at?: string
+          facilities?: string[] | null
           id?: string
           name: string
           type: string
         }
         Update: {
+          area_sqft?: number
+          booked_slots?: string[] | null
           capacity?: number
           created_at?: string
+          facilities?: string[] | null
           id?: string
           name?: string
           type?: string
